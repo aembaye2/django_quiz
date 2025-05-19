@@ -7,8 +7,14 @@ from .views import QuizListView, CategoriesListView, \
     ViewQuizListByCategory, QuizUserProgressView, QuizMarkingList, \
     QuizMarkingDetail, QuizDetailView, QuizTake
 
-urlpatterns = [
+from django.contrib import admin
 
+admin.autodiscover()
+
+urlpatterns = [
+    
+    url(r'^admin/', admin.site.urls), 
+    
     url(r'^$',
         view=QuizListView.as_view(),
         name='quiz_index'),

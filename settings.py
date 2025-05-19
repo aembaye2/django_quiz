@@ -127,7 +127,6 @@ INSTALLED_APPS = (
     'essay',
 )
 
-
 # Add static files directory for Codespaces
 STATIC_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'staticfiles')
 STATIC_URL = '/static/'
